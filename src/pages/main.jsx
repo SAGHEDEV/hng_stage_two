@@ -5,6 +5,7 @@ import Footer from "../components/footer";
 import HomePage from "./main/Home/index";
 import CartPage from "./main/cart/index";
 import CheckOut from "./main/checkout";
+import EmptyPage from "../components/emptyPage";
 
 const Main = () => {
   const { pathname } = useLocation();
@@ -19,6 +20,7 @@ const Main = () => {
         <Route path="/cart" element={<CartPage />} />
         <Route path="/cart/checkout" element={<CheckOut />} />
         <Route index element={<HomePage />} />
+        <Route path="*" element={<EmptyPage />} />
       </Routes>
       <Footer />
     </div>

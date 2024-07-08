@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import CheckOutForm from "./checkOutForm";
 import OrderSummary from "./ordersummery";
 import Modal from "./modal";
+import CoonfirmModal from "./coonfirmModal";
 
 const CheckOut = () => {
   const [show, setShow] = useState(false);
+  const [statusShow, setStatusShow] = useState(false);
 
   const handleShowConfirm = () => {
     setShow(true);
@@ -26,7 +28,13 @@ const CheckOut = () => {
           <OrderSummary handleShowConfirm={handleShowConfirm} />
         </div>
       </div>
-      <Modal hideConfirm={hideConfirm} show={show} />
+      <Modal
+        hideConfirm={hideConfirm}
+        show={show}
+        setStatusShow={setStatusShow}
+        setShow={setShow}
+      />
+      <CoonfirmModal statusShow={statusShow} />
     </>
   );
 };

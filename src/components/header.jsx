@@ -24,9 +24,11 @@ const Header = () => {
   return (
     <div className="flex justify-between items-center md:px-[50px] px-5 md:py-6 py-4 sticky top-0 z-50 bg-white/70 backdrop-blur-md">
       <div className="font-bold text-[16px] md:text-2xl flex justify-end items-center  gap-2">
-        <span className="p-0 m-0">
-          ROME<span className="font-normal">KAN</span>
-        </span>
+        <Link to="/">
+          <span className="p-0 m-0">
+            ROME<span className="font-normal">KAN</span>
+          </span>
+        </Link>
       </div>
       <nav className="hidden md:flex justify-between items-center gap-12 text-sm font-normal">
         {availablePages.map((page) => (

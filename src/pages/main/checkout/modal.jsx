@@ -2,7 +2,7 @@ import React from "react";
 import { BsCheck2 } from "react-icons/bs";
 import { RxCross2 } from "react-icons/rx";
 
-const Modal = ({ show, hideConfirm }) => {
+const Modal = ({ show, hideConfirm, setStatusShow, setShow }) => {
   return (
     <div
       className={`w-full lg:w-[100vh] h-[100%] fixed top-0 left-0 right-0 bottom-0 flex justify-center items-center ${
@@ -16,7 +16,7 @@ const Modal = ({ show, hideConfirm }) => {
         </p>
 
         <div className="flex justify-center gap-12 mt-4">
-          <button className="border border-green-500 text-green-500 rounded-md px-12 py-3 hover:bg-green-500 hover:text-white font-bold text-2xl">
+          <button className="border border-green-500 text-green-500 rounded-md px-12 py-3 hover:bg-green-500 hover:text-white font-bold text-2xl" onClick={()=>{setShow(false),setStatusShow(true)}}>
             <BsCheck2 />
           </button>
           <button
