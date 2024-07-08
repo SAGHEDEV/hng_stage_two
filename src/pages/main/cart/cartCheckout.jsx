@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const CartCheckout = () => {
   return (
@@ -9,10 +10,10 @@ const CartCheckout = () => {
             type="text"
             required
             placeholder="Coupon code"
-            className="w-full h-[47px] lg:w-[300px] lg:h-[56px] p-3 rounded-sm border"
+            className="w-full h-[47px] lg:w-[300px] lg:h-[56px] p-3 rounded border"
           />
           <button
-            className="font-normal text-[16px] h-[47px]  lg:h-[56px] px-5 text-white rounded-sm bg-[#024E82] hover:opacity-90"
+            className="font-normal text-[16px] h-[47px]  lg:h-[56px] px-5 text-white rounded bg-[#024E82] hover:opacity-90"
             type="submit"
           >
             Activate Coupon
@@ -37,12 +38,14 @@ const CartCheckout = () => {
             <span>Total</span>
             <span>$30</span>
           </p>
-          <button
-            className="font-normal text-[16px]  h-[58px] px-5 text-white rounded-lg bg-[#024E82] ml-3 mt-5 self-center hover:opacity-90"
-            type="submit"
-          >
-            Proceed to Checkout
-          </button>
+          <Link to="/cart/checkout">
+            <button
+              className="font-normal text-[16px]  h-[58px] px-5 text-white rounded-lg bg-[#024E82] ml-3 mt-5 self-center hover:opacity-90"
+              type="submit"
+            >
+              Proceed to Checkout
+            </button>
+          </Link>
         </div>
       </div>
     </div>

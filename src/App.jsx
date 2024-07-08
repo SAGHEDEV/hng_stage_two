@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "./components/header";
 import HomePage from "./pages/main/Home";
 import CartPage from "./pages/main/cart/index";
+import CheckOut from "./pages/main/checkout";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/cart" element={<CartPage />} />
+          <Route path="/cart/checkout" element={<CheckOut />} />
           <Route index element={<HomePage />} />
         </Routes>
       </BrowserRouter>

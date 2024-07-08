@@ -7,9 +7,9 @@ import CartCheckout from "./cartCheckout";
 const CartPage = () => {
   const { pathname } = useLocation();
   return (
-    <div className="px-5 md:px-[100px] py-8">
-      <span className="font-light">
-        Home <span className="font-semibold">{pathname}</span>
+    <div className="px-5 md:px-[50px] py-8">
+      <span className="font-light opacity-50">
+        Home <span className="font-semibold opacity-100">/ Cart</span>
       </span>
       <div>
         <CartHead />
