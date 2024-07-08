@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { FiShoppingBag } from "react-icons/fi";
 import { FaRegBookmark } from "react-icons/fa";
 import { IoMenu } from "react-icons/io5";
-import { isPart } from "../utilities/utils";
+import { isEqual, isPart } from "../utilities/utils";
 
 const Header = () => {
   const { pathname } = useLocation();
@@ -25,12 +25,18 @@ const Header = () => {
     <div className="flex justify-between items-center md:px-[50px] px-5 md:py-6 py-4 sticky top-0 z-50 bg-white/70 backdrop-blur-md">
       <div className="font-bold text-[16px] md:text-2xl flex justify-end items-center  gap-2">
         <span className="p-0 m-0">
-          Tim<span className="text-[#024E82]">bu</span>
+          ROME<span className="font-normal">KAN</span>
         </span>
       </div>
       <nav className="hidden md:flex justify-between items-center gap-12 text-sm font-normal">
         {availablePages.map((page) => (
-          <Link key={page.key} to={page.key} className={`hover:text-[#024E82]`}>
+          <Link
+            key={page.key}
+            to={page.key}
+            className={`hover:text-[#024E82] ${
+              isEqual(page.key, pathname) ? "text-[#024E82]" : ""
+            }`}
+          >
             {page.label}
           </Link>
         ))}
@@ -38,7 +44,7 @@ const Header = () => {
       <div className="flex justify-center items-center gap-6 md:gap-8 lg:gap-12">
         <span
           className="hidden md:flex justify-center items-center cursor-pointer  "
-          title="whilist"
+          title="wishlist"
         >
           <FaRegBookmark size={20} className="active:scale-95" />
         </span>

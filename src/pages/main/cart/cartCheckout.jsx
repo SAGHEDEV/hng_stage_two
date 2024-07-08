@@ -5,12 +5,12 @@ const CartCheckout = () => {
   return (
     <div className="mt-16 flex flex-col justify-between items-center lg:items-start lg:flex-row gap-16">
       <div className="w-full lg:w-1/2  stick top-0">
-        <form className="w-full flex justify-center items-center flex-col lg:flex-row gap-6">
+        <form className="w-full flex justify-start items-center flex-col lg:flex-row gap-6">
           <input
             type="text"
             required
             placeholder="Coupon code"
-            className="w-full h-[47px] lg:w-[300px] lg:h-[56px] p-3 rounded border"
+            className="w-full h-[47px] lg:w-[300px] lg:h-[56px] p-3 rounded border border-[#024E82]"
           />
           <button
             className="font-normal text-[16px] h-[47px]  lg:h-[56px] px-5 text-white rounded bg-[#024E82] hover:opacity-90"

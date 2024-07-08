@@ -1,27 +1,13 @@
 import React, { useState } from "react";
 import { MdOutlineArrowDropUp, MdOutlineArrowDropDown } from "react-icons/md";
 
-const Filter = () => {
-  const [filterState, setFilterState] = useState("Chairs");
+const Filter = ({
+  filters,
+  filterState,
+  setFilterState,
+  setCurrentProduct,
+}) => {
   const [isOpen, setIsOpen] = useState(false);
-  const filters = [
-    {
-      value: "Chairs",
-      label: "Chairs",
-    },
-    {
-      value: "Bed",
-      label: "Bed",
-    },
-    {
-      value: "Dining set",
-      label: "Dining Set",
-    },
-    {
-      value: "TV Cnsole",
-      label: "TV Console",
-    },
-  ];
   return (
     <div className="flex justify-between items-center px-5 md:px-[50px] py-8 ">
       <div className="relative lg:hidden">
@@ -40,6 +26,7 @@ const Filter = () => {
                 onClick={() => {
                   setFilterState(filter.value);
                   setIsOpen(false);
+                  setCurrentProduct(filter.target);
                 }}
               >
                 {filter.label}
@@ -58,7 +45,10 @@ const Filter = () => {
                 ? "text-[#024E82] text-[20px] font-[500]"
                 : "text-[14px]"
             }`}
-            onClick={() => setFilterState(filter.value)}
+            onClick={() => {
+              setFilterState(filter.value);
+              setCurrentProduct(filter.target);
+            }}
           >
             {filter.label}
           </span>

@@ -17,7 +17,7 @@ const CartPage = () => {
           <CartCard />
         </div>
 
-        <div className="w-full flex justify-center items-center lg:items-start">
+        <div className="w-full flex justify-center lg:justify-start items-center lg:items-start">
           <button className="font-medium self-center lg:self-left text-[16px] h-[56px] px-5 rounded-md  border border-[#024E82] mt-5 hover:bg-[#024E82] hover:text-white">
             Return to store
           </button>
