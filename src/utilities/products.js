@@ -160,30 +160,7 @@ export const BedList = [
     discount: "-35%",
   },
 ];
-export const diningList = [
-  {
-    id: 2,
-    name: "White classy chair",
-    price: 64,
-    discountPrice: 130,
-    imageSrc: dining2,
-    discount: "-35%",
-  },
-  {
-    id: 3,
-    name: "BRed Party Chair",
-    price: 124,
-    discountPrice: 124,
-    imageSrc: dining3,
-  },
-  {
-    id: 4,
-    name: "Krisgold Armgold",
-    price: 234,
-    discountPrice: 234,
-    imageSrc: dining4,
-  },
-];
+export const diningList = [];
 export const consoleList = [
   {
     id: 1,
