@@ -20,6 +20,10 @@ import tvconsole1 from "../assets/images/tvconsole1-Photoroom.png";
 import tvconsole2 from "../assets/images/tvconsole2-Photoroom.png";
 import tvconsole3 from "../assets/images/tvconsole3-Photoroom.png";
 import tvconsole4 from "../assets/images/tvconsole4-Photoroom.png";
+import dining1 from "../assets/images/dining1-Photoroom.png";
+import dining2 from "../assets/images/dining2-Photoroom.png";
+import dining3 from "../assets/images/dining3-Photoroom.png";
+import dining4 from "../assets/images/dining4-Photoroom.png";
 
 export const ChairList = [
   {
@@ -157,7 +161,37 @@ export const BedList = [
     discount: "-35%",
   },
 ];
-export const diningList = [];
+export const diningList = [
+  {
+    id: 1,
+    name: "Black Party Chair",
+    price: 49,
+    discountPrice: 49,
+    imageSrc: dining1,
+  },
+  {
+    id: 2,
+    name: "White classy chair",
+    price: 64,
+    discountPrice: 130,
+    imageSrc: dining2,
+    discount: "-35%",
+  },
+  {
+    id: 3,
+    name: "BRed Party Chair",
+    price: 124,
+    discountPrice: 124,
+    imageSrc: dining3,
+  },
+  {
+    id: 4,
+    name: "Krisgold Armgold",
+    price: 234,
+    discountPrice: 234,
+    imageSrc: dining4,
+  },
+];
 export const consoleList = [
   {
     id: 1,

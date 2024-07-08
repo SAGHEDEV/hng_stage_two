@@ -13,7 +13,7 @@ const EmptyPage = () => {
       <h3 className="text-2xl font-bold text-center mt-10 text-[#024E82]">
         Ohhhh, Page is still under construction
       </h3>
-      <p className="py-2 pb-4">
+      <p className="py-2 pb-4 text-center font-extralight">
         This page you are looking for is either under construction or not
         available, kindly go back and continue shopping
       </p>
