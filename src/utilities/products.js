@@ -16,10 +16,10 @@ import bed3 from "../assets/images/bed3.png";
 import bed4 from "../assets/images/bed4.png";
 import bed5 from "../assets/images/bed5.png";
 import bed6 from "../assets/images/bed6.png";
-import tvconsole1 from "../assets/images/tvconsole1.png";
-import tvconsole2 from "../assets/images/tvconsole2.png";
-import tvconsole3 from "../assets/images/tvconsole3.png";
-import tvconsole4 from "../assets/images/tvconsole4.png";
+import tvconsole1 from "../assets/images/tvconsole1-Photoroom.png";
+import tvconsole2 from "../assets/images/tvconsole2-Photoroom.png";
+import tvconsole3 from "../assets/images/tvconsole3-Photoroom.png";
+import tvconsole4 from "../assets/images/tvconsole4-Photoroom.png";
 
 export const ChairList = [
   {
