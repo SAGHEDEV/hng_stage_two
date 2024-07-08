@@ -15,7 +15,7 @@ const CheckOut = () => {
   return (
     <>
       <div className="w-full py-8 flex flex-col lg:flex-row justify-between items-start gap-28 relative">
-        <div className="w-full lg:w-2/3 pl-10 lg:pl-[50px]">
+        <div className="w-full lg:w-2/3 pl-10 pr-10 lg:pl-[50px]">
           <span className="font-light opacity-50">
             Home / Cart
             <span className="font-semibold opacity-100"> / Checkout</span>
