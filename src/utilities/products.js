@@ -16,6 +16,14 @@ import bed3 from "../assets/images/bed3.png";
 import bed4 from "../assets/images/bed4.png";
 import bed5 from "../assets/images/bed5.png";
 import bed6 from "../assets/images/bed6.png";
+import dining1 from "../assets/images/dining1.png";
+import dining2 from "../assets/images/dining2.png";
+import dining3 from "../assets/images/dining3.png";
+import dining4 from "../assets/images/dining4.png";
+import tvconsole1 from "../assets/images/tvconsole1.png";
+import tvconsole2 from "../assets/images/tvconsole2.png";
+import tvconsole3 from "../assets/images/tvconsole3.png";
+import tvconsole4 from "../assets/images/tvconsole4.png";
 
 export const ChairList = [
   {
@@ -151,5 +159,67 @@ export const BedList = [
     discountPrice: 264,
     imageSrc: bed6,
     discount: "-35%",
+  },
+];
+export const diningList = [
+  {
+    id: 1,
+    name: "Black Party Chair",
+    price: 49,
+    discountPrice: 49,
+    imageSrc: dining1,
+  },
+  {
+    id: 2,
+    name: "White classy chair",
+    price: 64,
+    discountPrice: 130,
+    imageSrc: dining2,
+    discount: "-35%",
+  },
+  {
+    id: 3,
+    name: "BRed Party Chair",
+    price: 124,
+    discountPrice: 124,
+    imageSrc: dining3,
+  },
+  {
+    id: 4,
+    name: "Krisgold Armgold",
+    price: 234,
+    discountPrice: 234,
+    imageSrc: dining4,
+  },
+];
+export const consoleList = [
+  {
+    id: 1,
+    name: "Black Party Chair",
+    price: 49,
+    discountPrice: 49,
+    imageSrc: tvconsole1,
+  },
+  {
+    id: 2,
+    name: "White classy chair",
+    price: 64,
+    discountPrice: 130,
+    imageSrc: tvconsole2,
+    discount: "-35%",
+  },
+  {
+    id: 3,
+    name: "BRed Party Chair",
+    price: 124,
+    discountPrice: 124,
+    imageSrc: tvconsole3,
+  },
+  {
+    id: 4,
+    name: "Krisgold Armgold",
+    price: 234,
+    discountPrice: 234,
+    imageSrc: tvconsole4,
   },
 ];

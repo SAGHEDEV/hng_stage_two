@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const CartCheckout = () => {
   return (
     <div className="mt-16 flex flex-col justify-between items-center lg:items-start lg:flex-row gap-16">
-      <div className="w-full lg:w-1/2  stick top-0">
+      <div className="w-full lg:w-1/2  lg:sticky top-24">
         <form className="w-full flex justify-start items-center flex-col lg:flex-row gap-6">
           <input
             type="text"

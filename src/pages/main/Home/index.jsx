@@ -3,7 +3,12 @@ import Hero from "./hero";
 import Filter from "./filter";
 import ProductCard from "./card";
 import CountNavig from "./countNavig";
-import { BedList, ChairList } from "../../../utilities/products";
+import {
+  BedList,
+  ChairList,
+  consoleList,
+  diningList,
+} from "../../../utilities/products";
 
 const HomePage = () => {
   const [filterState, setFilterState] = useState("Chairs");
@@ -22,12 +27,12 @@ const HomePage = () => {
     {
       value: "Dining set",
       label: "Dining Set",
-      target: null,
+      target: diningList,
     },
     {
       value: "TV Cnsole",
       label: "TV Console",
-      target: null,
+      target: consoleList,
     },
   ];
   return (

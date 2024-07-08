@@ -54,12 +54,12 @@ const Header = () => {
         >
           <Link to="/cart">
             <FiShoppingBag
-              size={20}
-              className={`active:scale-95 ${
-                isPart(pathname, "cart") ? "text-[#024E82]" : ""
+              size={38}
+              className={`active:scale-95 p-2  ${
+                isPart(pathname, "cart") ? "text-[#024E82] border rounded" : ""
               }`}
             />
-            <span className="absolute -top-1 -right-1 flex justify-center items-center text-white bg-[#024E82] w-[14px] h-[14px] rounded-full text-[7px] font-bold">
+            <span className="absolute top-1 right-1 flex justify-center items-center text-white bg-[#024E82] w-[14px] h-[14px] rounded-full text-[7px] font-bold">
               10
             </span>
           </Link>
