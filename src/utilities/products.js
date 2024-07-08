@@ -16,7 +16,6 @@ import bed3 from "../assets/images/bed3.png";
 import bed4 from "../assets/images/bed4.png";
 import bed5 from "../assets/images/bed5.png";
 import bed6 from "../assets/images/bed6.png";
-import dining1 from "../assets/images/dining1.png";
 import dining2 from "../assets/images/dining2.png";
 import dining3 from "../assets/images/dining3.png";
 import dining4 from "../assets/images/dining4.png";
@@ -162,13 +161,6 @@ export const BedList = [
   },
 ];
 export const diningList = [
-  {
-    id: 1,
-    name: "Black Party Chair",
-    price: 49,
-    discountPrice: 49,
-    imageSrc: dining1,
-  },
   {
     id: 2,
     name: "White classy chair",
