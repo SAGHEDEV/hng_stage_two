@@ -16,9 +16,7 @@ import bed3 from "../assets/images/bed3.png";
 import bed4 from "../assets/images/bed4.png";
 import bed5 from "../assets/images/bed5.png";
 import bed6 from "../assets/images/bed6.png";
-import dining2 from "../assets/images/dining2.png";
-import dining3 from "../assets/images/dining3.png";
-import dining4 from "../assets/images/dining4.png";
+
 import tvconsole1 from "../assets/images/tvconsole1.png";
 import tvconsole2 from "../assets/images/tvconsole2.png";
 import tvconsole3 from "../assets/images/tvconsole3.png";
