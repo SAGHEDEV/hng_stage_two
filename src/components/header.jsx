@@ -54,12 +54,6 @@ const Header = () => {
         </nav>
         <div className="flex justify-center items-center gap-6 md:gap-8 lg:gap-12">
           <span
-            className="hidden md:flex justify-center items-center cursor-pointer  "
-            title="wishlist"
-          >
-            <FaRegBookmark size={20} className="active:scale-95" />
-          </span>
-          <span
             className="flex justify-center items-center relative cursor-pointer"
             title="cart"
           >
