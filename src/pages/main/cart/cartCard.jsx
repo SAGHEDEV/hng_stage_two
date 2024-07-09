@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { MdCancel } from "react-icons/md";
 
-const CartCard = ({ cart }) => {
+const CartCard = ({ cart, handleCartDelete }) => {
   const [numOfProd, setNumOfProd] = useState(1);
   const handleIncrease = () => {
     setNumOfProd((prevNum) => Number(prevNum) + 1);
@@ -51,7 +51,11 @@ const CartCard = ({ cart }) => {
           ${numOfProd * cart.price}
         </span>
 
-        <MdCancel className="text-lg text-red-700 absolute top-2 right-2 cursor-pointer" />
+        <MdCancel
+          className="text-lg text-red-700 absolute top-2 right-2 cursor-pointer"
+          title="Remove Item from Cart"
+          onClick={() => handleCartDelete(cart.id)}
+        />
       </div>
 
       <div className="shadow-lg my-3 shadow-[#0000000D] lg:hidden flex flex-col gap-8 relative bg-white min-h-[267px] px-4 py-6">
@@ -92,7 +96,11 @@ const CartCard = ({ cart }) => {
           <p className="text-base">Subtotal:</p>
           <p className="text-[14px]">${cart.price * cart.quantity}</p>
         </span>
-        <MdCancel className="text-lg text-red-700 absolute top-2 right-2 cursor-pointer active:scale-95" />
+        <MdCancel
+          className="text-lg text-red-700 absolute top-2 right-2 cursor-pointer active:scale-95"
+          title="Remove Item from Cart"
+          onClick={() => handleCartDelete(cart.id)}
+        />
       </div>
     </>
   );

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import CartCard from "./cartCard";
 import CartHead from "./cartHead";
@@ -7,7 +7,11 @@ import { CartData } from "../../../utilities/products";
 import { total } from "../../../utilities/utils";
 
 const CartPage = () => {
-  const { pathname } = useLocation();
+  const [carts, setCarts] = useState(CartData);
+  const handleCartDelete = (deleteId) => {
+    const newCarts = carts.filter((cart) => cart.id !== deleteId);
+    setCarts(newCarts);
+  };
 
   return (
     <div className="px-5 md:px-[50px] py-8">
@@ -17,9 +21,19 @@ const CartPage = () => {
       <div>
         <CartHead />
         <div className="my-10">
-          {CartData.map((cart) => (
-            <CartCard cart={cart} key={cart.cart} />
-          ))}
+          {carts.length ? (
+            carts.map((cart) => (
+              <CartCard
+                cart={cart}
+                key={cart.cart}
+                handleCartDelete={handleCartDelete}
+              />
+            ))
+          ) : (
+            <p className="font-semibold text-lg text-center">
+              Cart is empty. Kindly return to store to add something to Cart
+            </p>
+          )}
         </div>
 
         <div className="w-full flex justify-center lg:justify-start items-center lg:items-start">
