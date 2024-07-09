@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaRegCheckCircle } from "react-icons/fa";
 
 const CheckOutForm = () => {
+  const [chosen, setChosen] = useState();
   return (
     <div className="mt-16">
       <div className="mb-16">
@@ -9,25 +10,45 @@ const CheckOutForm = () => {
           <span className="text-sm lg:text-[16px] font-normal">
             Customer Information
           </span>
-          <span className="text-xs text-[#016FD0] cursor-pointer">edit</span>
+          <label
+            className="text-xs text-[#016FD0] cursor-pointer"
+            htmlFor="email"
+          >
+            edit
+          </label>
         </p>
         <input
           type="email"
           placeholder="Email for order confirmation"
+          id="email"
           className="w-full h-[38px] border pl-2 rounded font-light"
         />
       </div>
 
       <div className="flex justify-start flex-col lg:flex-row items-center gap-4">
-        <div className="border bg-gray-50 py-5 px-7 rounded relative cursor-pointer hover:scale-95">
+        <div
+          className="border bg-gray-50 py-5 px-7 rounded relative cursor-pointer hover:scale-95"
+          onClick={() => setChosen(1)}
+        >
           <p className="font-mediu text-sm">Home Delivery</p>
           <p className="text-[12px]">Takes 3-5 business days</p>
-          <FaRegCheckCircle className="absolute top-4 right-4 text-green-500" />
+          {chosen === 1 ? (
+            <FaRegCheckCircle className="absolute top-4 right-4 text-green-500" />
+          ) : (
+            ""
+          )}
         </div>
-        <div className="border bg-gray-50 py-5 px-7 rounded relative cursor-pointer hover:scale-95">
+        <div
+          className="border bg-gray-50 py-5 px-7 rounded relative cursor-pointer hover:scale-95"
+          onClick={() => setChosen(2)}
+        >
           <p className="font-mediu text-sm">In-Store Pickup</p>
           <p className="text-[12px]">Pickup from store location</p>
-          <FaRegCheckCircle className="absolute top-4 right-4 text-green-500 hidden" />
+          {chosen === 2 ? (
+            <FaRegCheckCircle className="absolute top-4 right-4 text-green-500" />
+          ) : (
+            ""
+          )}
         </div>
       </div>
 
@@ -36,13 +57,19 @@ const CheckOutForm = () => {
           <span className="text-sm lg:text-[16px] font-normal">
             Billing Address
           </span>
-          <span className="text-xs text-[#016FD0] cursor-pointer">edit</span>
+          <label
+            className="text-xs text-[#016FD0] cursor-pointer"
+            htmlFor="first_name"
+          >
+            edit
+          </label>
         </p>
         <div className="w-full flex flex-col justify-center items-center gap-4">
           <div className="w-full flex flex-col lg:flex-row justify-center items-center gap-2">
             <input
               type="text"
               placeholder="First Name"
+              id="first_name"
               className="w-full lg:w-1/2  h-[38px] border pl-2 rounded font-light"
             />
             <input

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const CartCheckout = () => {
+const CartCheckout = ({ total }) => {
   return (
     <div className="mt-16 flex flex-col justify-between items-center lg:items-start lg:flex-row gap-16">
       <div className="w-full lg:w-1/2  lg:sticky top-24">
@@ -26,7 +26,7 @@ const CartCheckout = () => {
         <div className="mt-5 flex flex-col justify-center items-center">
           <p className="flex justify-between items-center w-full text-[16px]">
             <span>Subtotal</span>
-            <span>$30</span>
+            <span>${total}</span>
           </p>
           <div className="w-full p-[1px] bg-gray-200 my-5"></div>
           <p className="flex justify-between items-center w-full text-[16px]">
@@ -36,7 +36,7 @@ const CartCheckout = () => {
           <div className="w-full p-[1px] bg-gray-200 my-5"></div>
           <p className="flex justify-between items-center w-full text-[16px]">
             <span>Total</span>
-            <span>$30</span>
+            <span>${total}</span>
           </p>
           <Link to="/cart/checkout">
             <button

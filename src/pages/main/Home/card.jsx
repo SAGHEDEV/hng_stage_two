@@ -7,7 +7,7 @@ const ProductCard = (chair) => {
       <div className="flex justify-center items-center w-full bg-[#F9F9F9] p-10">
         <img
           src={chair.chair.imageSrc}
-          alt="Product Image"
+          alt="https://via.placeholder.com/400"
           className="h-[100%] lg:h-40 product-img"
         />
       </div>

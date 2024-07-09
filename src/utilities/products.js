@@ -29,6 +29,7 @@ export const ChairList = [
   {
     id: 1,
     name: "Black Party Chair",
+    quantity: 1,
     price: 49,
     discountPrice: 49,
     imageSrc: Chair1,
@@ -36,6 +37,7 @@ export const ChairList = [
   {
     id: 2,
     name: "White classy chair",
+    quantity: 1,
     price: 64,
     discountPrice: 130,
     imageSrc: Chair2,
@@ -43,7 +45,8 @@ export const ChairList = [
   },
   {
     id: 3,
-    name: "BRed Party Chair",
+    name: "Red Party Chair",
+    quantity: 1,
     price: 124,
     discountPrice: 124,
     imageSrc: Chair3,
@@ -51,6 +54,7 @@ export const ChairList = [
   {
     id: 4,
     name: "Krisgold Armgold",
+    quantity: 1,
     price: 234,
     discountPrice: 234,
     imageSrc: Chair4,
@@ -58,6 +62,7 @@ export const ChairList = [
   {
     id: 5,
     name: "White classy chair",
+    quantity: 1,
     price: 240,
     discountPrice: 240,
     imageSrc: Chair5,
@@ -65,6 +70,7 @@ export const ChairList = [
   {
     id: 6,
     name: "Comfy chair",
+    quantity: 1,
     price: 49,
     discountPrice: 264,
     imageSrc: Chair6,
@@ -73,6 +79,7 @@ export const ChairList = [
   {
     id: 7,
     name: "Black Party Chair",
+    quantity: 1,
     price: 224,
     discountPrice: 224,
     imageSrc: Chair7,
@@ -80,6 +87,7 @@ export const ChairList = [
   {
     id: 8,
     name: "White classy chair",
+    quantity: 1,
     price: 69,
     discountPrice: 130,
     imageSrc: Chair8,
@@ -88,6 +96,7 @@ export const ChairList = [
   {
     id: 9,
     name: "Black Party Chair",
+    quantity: 1,
     price: 124,
     discountPrice: 124,
     imageSrc: Chair9,
@@ -95,6 +104,7 @@ export const ChairList = [
   {
     id: 10,
     name: "Krisgold Armgold",
+    quantity: 1,
     price: 224,
     discountPrice: 224,
     imageSrc: Chair10,
@@ -102,6 +112,7 @@ export const ChairList = [
   {
     id: 11,
     name: "White classy chair",
+    quantity: 1,
     price: 204,
     discountPrice: 204,
     imageSrc: Chair11,
@@ -109,6 +120,7 @@ export const ChairList = [
   {
     id: 12,
     name: "Comfy chair",
+    quantity: 1,
     price: 49,
     discountPrice: 124,
     imageSrc: Chair12,
@@ -118,14 +130,16 @@ export const ChairList = [
 export const BedList = [
   {
     id: 1,
-    name: "Black Party Chair",
+    name: "White Fluffy Bed",
+    quantity: 1,
     price: 49,
     discountPrice: 49,
     imageSrc: bed1,
   },
   {
     id: 2,
-    name: "White classy chair",
+    name: "White classy Bed",
+    quantity: 1,
     price: 64,
     discountPrice: 130,
     imageSrc: bed2,
@@ -133,28 +147,32 @@ export const BedList = [
   },
   {
     id: 3,
-    name: "BRed Party Chair",
+    name: "Bed with wheel 1",
+    quantity: 1,
     price: 124,
     discountPrice: 124,
     imageSrc: bed3,
   },
   {
     id: 4,
-    name: "Krisgold Armgold",
+    name: "Bed with wheel 2",
+    quantity: 1,
     price: 234,
     discountPrice: 234,
     imageSrc: bed4,
   },
   {
     id: 5,
-    name: "White classy chair",
+    name: "White Royal Bed",
+    quantity: 1,
     price: 240,
     discountPrice: 240,
     imageSrc: bed5,
   },
   {
     id: 6,
-    name: "Comfy chair",
+    name: "Dark classy bed",
+    quantity: 1,
     price: 49,
     discountPrice: 264,
     imageSrc: bed6,
@@ -164,14 +182,16 @@ export const BedList = [
 export const diningList = [
   {
     id: 1,
-    name: "Black Party Chair",
+    name: "Simple Dark table",
+    quantity: 1,
     price: 49,
     discountPrice: 49,
     imageSrc: dining1,
   },
   {
     id: 2,
-    name: "White classy chair",
+    name: "Family of four table",
+    quantity: 1,
     price: 64,
     discountPrice: 130,
     imageSrc: dining2,
@@ -179,14 +199,16 @@ export const diningList = [
   },
   {
     id: 3,
-    name: "BRed Party Chair",
+    name: "Cunning table",
+    quantity: 1,
     price: 124,
     discountPrice: 124,
     imageSrc: dining3,
   },
   {
     id: 4,
-    name: "Krisgold Armgold",
+    name: "Golden Table",
+    quantity: 1,
     price: 234,
     discountPrice: 234,
     imageSrc: dining4,
@@ -196,6 +218,7 @@ export const consoleList = [
   {
     id: 1,
     name: "Black Party Chair",
+    quantity: 1,
     price: 49,
     discountPrice: 49,
     imageSrc: tvconsole1,
@@ -203,6 +226,7 @@ export const consoleList = [
   {
     id: 2,
     name: "White classy chair",
+    quantity: 1,
     price: 64,
     discountPrice: 130,
     imageSrc: tvconsole2,
@@ -211,6 +235,7 @@ export const consoleList = [
   {
     id: 3,
     name: "BRed Party Chair",
+    quantity: 1,
     price: 124,
     discountPrice: 124,
     imageSrc: tvconsole3,
@@ -218,8 +243,29 @@ export const consoleList = [
   {
     id: 4,
     name: "Krisgold Armgold",
+    quantity: 1,
     price: 234,
     discountPrice: 234,
     imageSrc: tvconsole4,
+  },
+];
+
+export const CartData = [
+  {
+    id: 1,
+    name: "Simple Table Set",
+    quantity: 1,
+    price: 49,
+    discountPrice: 49,
+    imageSrc: tvconsole1,
+  },
+  {
+    id: 2,
+    name: "White Royal bed",
+    quantity: 1,
+    price: 64,
+    discountPrice: 130,
+    imageSrc: bed5,
+    discount: "-35%",
   },
 ];

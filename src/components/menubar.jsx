@@ -28,7 +28,7 @@ const Menubar = ({ menuOpen }) => {
         <p className="font-light text-xs text-left">Others</p>
         <Link className="w-full" to="contact">
           <span className="w-full h-16 px-4 my-3 flex justify-start items-center hover:bg-gray-100 active:scale-95 cursor-pointer">
-            My Order
+            Contact
           </span>
         </Link>
       </div>

@@ -3,9 +3,14 @@ import { useLocation } from "react-router-dom";
 import CartCard from "./cartCard";
 import CartHead from "./cartHead";
 import CartCheckout from "./cartCheckout";
+import { CartData } from "../../../utilities/products";
 
 const CartPage = () => {
   const { pathname } = useLocation();
+  let total = CartData.reduce((a, c) => {
+    let productPrice = Number(c.price) * Number(c.quantity);
+    return a + Number(productPrice);
+  }, 0);
   return (
     <div className="px-5 md:px-[50px] py-8">
       <span className="font-light opacity-50">
@@ -14,7 +19,9 @@ const CartPage = () => {
       <div>
         <CartHead />
         <div className="my-10">
-          <CartCard />
+          {CartData.map((cart) => (
+            <CartCard cart={cart} key={cart.cart} />
+          ))}
         </div>
 
         <div className="w-full flex justify-center lg:justify-start items-center lg:items-start">
@@ -23,7 +30,7 @@ const CartPage = () => {
           </button>
         </div>
       </div>
-      <CartCheckout />
+      <CartCheckout total={total} />
     </div>
   );
 };
