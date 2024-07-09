@@ -9,7 +9,7 @@ const ProductCard = ({ chair }) => {
         <img
           src={chair.imageSrc}
           alt="https://via.placeholder.com/400"
-          className="h-[100%] lg:h-40 product-img"
+          className="h-28 lg:h-56  product-img"
         />
       </div>
       <div className="p-5">
