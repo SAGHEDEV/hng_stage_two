@@ -42,8 +42,8 @@ const CheckOutForm = () => {
           className="border bg-gray-50 py-5 px-7 rounded relative cursor-pointer hover:scale-95"
           onClick={() => setChosen(2)}
         >
-          <p className="font-mediu text-sm">In-Store Pickup</p>
-          <p className="text-[12px]">Pickup from store location</p>
+          <p className="font-mediu text-sm">Home Delivery</p>
+          <p className="text-[12px]">Takes 3-5 business days</p>
           {chosen === 2 ? (
             <FaRegCheckCircle className="absolute top-4 right-4 text-green-500" />
           ) : (

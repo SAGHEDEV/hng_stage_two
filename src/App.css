@@ -5,3 +5,22 @@
   transform: scale(1.2);
   transition: 0.2s ease-in-out;
 }
+.blur-in1 {
+  animation: blur-in 2s ease-in-out 1s;
+}
+.blur-in2 {
+  animation: blur-in 2s ease-in-out 2s;
+}
+.blur-in {
+  animation: blur-in 2s ease-in-out 1s;
+}
+@keyframes blur-in {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

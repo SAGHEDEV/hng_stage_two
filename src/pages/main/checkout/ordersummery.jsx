@@ -1,6 +1,8 @@
 import React from "react";
 import Card from "./card";
 import { Link } from "react-router-dom";
+import { CartData } from "../../../utilities/products";
+import { total } from "../../../utilities/utils";
 
 const OrderSummary = ({ handleShowConfirm }) => {
   return (
@@ -10,15 +12,16 @@ const OrderSummary = ({ handleShowConfirm }) => {
       </p>
 
       <div className="my-12">
-        <Card />
-        <Card />
+        {CartData.map((cart) => (
+          <Card cart={cart} />
+        ))}
       </div>
 
       <p className="text-[20px] font-medium mt-8">Cart Total</p>
       <div className="mt-5 flex flex-col justify-center items-center">
         <p className="flex justify-between items-center w-full text-[16px]">
           <span>Subtotal</span>
-          <span>$30</span>
+          <span>${total}</span>
         </p>
         <div className="w-full p-[1px] bg-gray-200 my-5"></div>
         <p className="flex justify-between items-center w-full text-[16px]">
@@ -28,7 +31,7 @@ const OrderSummary = ({ handleShowConfirm }) => {
         <div className="w-full p-[1px] bg-gray-200 my-5"></div>
         <p className="flex justify-between items-center w-full text-[16px]">
           <span>Total</span>
-          <span>$30</span>
+          <span>${total}</span>
         </p>
       </div>
 
