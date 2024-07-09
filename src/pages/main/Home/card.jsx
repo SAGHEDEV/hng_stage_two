@@ -1,5 +1,6 @@
 import React from "react";
 import { FaShoppingCart } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const ProductCard = (chair) => {
   return (
@@ -24,12 +25,14 @@ const ProductCard = (chair) => {
               ${chair.chair.discountPrice}
             </span>
           </p>
-          <div
-            className="p-2 bg-[#024E82] rounded-full text-white cursor-pointer hover:opacity-80"
-            title="Add to cart"
-          >
-            <FaShoppingCart className="text-[12px] lg:text-[18px]" />
-          </div>
+          <Link to="cart">
+            <div
+              className="p-2 bg-[#024E82] rounded-full text-white cursor-pointer hover:opacity-80"
+              title="Add to cart"
+            >
+              <FaShoppingCart className="text-[12px] lg:text-[18px]" />
+            </div>
+          </Link>
         </div>
       </div>
       {chair.chair.discount ? (

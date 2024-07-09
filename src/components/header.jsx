@@ -7,6 +7,7 @@ import { ImCancelCircle } from "react-icons/im";
 
 import { isEqual, isPart } from "../utilities/utils";
 import Menubar from "./menubar";
+import { CartData } from "../utilities/products";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(true);
@@ -69,8 +70,8 @@ const Header = () => {
                   isPart(pathname, "cart") ? "text-[#024E82] " : ""
                 }`}
               />
-              <span className="absolute -top-1 -right-1 flex justify-center items-center text-white bg-[#024E82] w-[14px] h-[14px] rounded-full text-[7px] font-bold">
-                10
+              <span className="absolute -top-1 -right-1 flex justify-center items-center text-white bg-[#024E82] w-[14px] h-[14px] rounded-full text-[8px] font-bold">
+                {CartData.length}
               </span>
             </Link>
           </span>

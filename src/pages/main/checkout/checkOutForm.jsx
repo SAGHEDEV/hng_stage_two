@@ -111,6 +111,12 @@ const CheckOutForm = () => {
             />
           </div>
         </div>
+        <p className="mt-5">
+          <input type="radio" name="save" id="save" />
+          <label htmlFor="save" className="pl-2">
+            Save Details Update
+          </label>
+        </p>
       </div>
     </div>
   );

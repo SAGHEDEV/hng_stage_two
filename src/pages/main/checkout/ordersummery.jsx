@@ -36,7 +36,7 @@ const OrderSummary = ({ handleShowConfirm }) => {
         <p className="font-medium text-[16px] lg:text-[24px] text-center mb-5">
           Payment Option
         </p>
-        <div className="my-10 flex justify-start gap-6">
+        <div className="my-6 flex justify-start gap-3">
           <input type="radio" name="payment-option" id="" />
           <p className="flex flex-col text-black">
             <span className="text-sm lg:text-[16px] pb-1">
