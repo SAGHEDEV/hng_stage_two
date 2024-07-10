@@ -217,7 +217,7 @@ export const diningList = [
 export const consoleList = [
   {
     id: 1,
-    name: "Black Party Chair",
+    nbame: "TV set with speaker",
     quantity: 1,
     price: 49,
     discountPrice: 49,
@@ -225,7 +225,7 @@ export const consoleList = [
   },
   {
     id: 2,
-    name: "White classy chair",
+    name: "Simple classy set",
     quantity: 1,
     price: 64,
     discountPrice: 130,
@@ -234,7 +234,7 @@ export const consoleList = [
   },
   {
     id: 3,
-    name: "BRed Party Chair",
+    name: "Dark Set",
     quantity: 1,
     price: 124,
     discountPrice: 124,
@@ -242,7 +242,7 @@ export const consoleList = [
   },
   {
     id: 4,
-    name: "Krisgold Armgold",
+    name: "Krisgold set",
     quantity: 1,
     price: 234,
     discountPrice: 234,
