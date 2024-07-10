@@ -14,7 +14,7 @@ const CartPage = () => {
   };
 
   return (
-    <div className="px-5 md:px-[50px] py-8">
+    <div className="px-5 md:px-[120px] py-8">
       <span className="font-light opacity-50">
         Home <span className="font-semibold opacity-100">/ Cart</span>
       </span>

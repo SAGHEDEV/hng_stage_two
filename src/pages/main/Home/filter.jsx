@@ -9,7 +9,7 @@ const Filter = ({
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="flex justify-between items-center px-5 md:px-[50px] py-8 ">
+    <div className="flex justify-between items-center px-5 md:px-[120px] py-8 ">
       <div className="relative lg:hidden">
         <button
           className="w-40 py-3 border flex justify-between items-center px-3 rounded font-semibold lg:text-lg text-[#024E82]"

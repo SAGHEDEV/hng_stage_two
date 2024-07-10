@@ -6,7 +6,7 @@ import Twitter from "../assets/images/twitter.jpeg";
 const Footer = () => {
   return (
     <div>
-      <footer class="bg-[#FAFAFA] font-normal md:px-[50px] px-5 md:py-20 py-10 space-y-8 lg:space-y-0">
+      <footer class="bg-[#FAFAFA] font-normal md:px-[120px] px-5 md:py-20 py-10 space-y-8 lg:space-y-0">
         <div class="mx-auto max-w-screen-xl flex flex-col md:flex-row gap-8 md:gap-12 justify-between ">
           <div class="flex flex-col gap-6">
             <a

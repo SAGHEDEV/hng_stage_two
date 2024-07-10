@@ -31,7 +31,7 @@ const Header = () => {
   }, [pathname]);
   return (
     <>
-      <div className="flex justify-between items-center md:px-[50px] px-5 md:py-6 py-4 sticky top-0 z-50 bg-white/70 backdrop-blur-md">
+      <div className="flex justify-between items-center md:px-[120px] px-5 md:py-6 py-4 sticky top-0 z-50 bg-white/70 backdrop-blur-md">
         <div className="font-bold text-[16px] md:text-2xl flex justify-end items-center  gap-2">
           <Link to="/">
             <span className="p-0 m-0">
