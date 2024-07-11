@@ -10,7 +10,7 @@ const Modal = ({ show, hideConfirm, setStatusShow, setShow }) => {
       }`}
     >
       <div className="w-[100%] h-[100%] fixed top-0 left-0 right-0 bottom-0 bg-black/30"></div>
-      <div className="bg-white p-8 lg:p-10 rounded-md z-20 self-center relative lg:left-[50%] lg:right-[50%] sm:w-80 md:w-96">
+      <div className="bg-white p-8 lg:p-10 rounded-md z-20 self-center relative lg:left-[50%] lg:right-[50%] ">
         <p className="text-[16px] lg:text-[48px] p-5 text-center">
           Are you sure you want to complete the order?
         </p>
