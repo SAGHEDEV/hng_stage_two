@@ -2,10 +2,10 @@ import React from "react";
 import { BsCheck2 } from "react-icons/bs";
 import { RxCross2 } from "react-icons/rx";
 
-const Modal = ({ show, hideConfirm, setStatusShow, setShow }) => {
+const Modal = ({ show, setStatusShow, setShow }) => {
   return (
     <div
-      className={`w-full lg:w-[100vh] h-[100%] fixed top-0 left-0 right-0 bottom-0 flex justify-center items-center ${
+      className={`w-full lg:w-[100vh] h-[100%] fixed top-0 left-0 right-0 bottom-0 flex justify-center items-center p-5 md:p-0 ${
         show ? "block" : "hidden"
       }`}
     >
@@ -26,7 +26,7 @@ const Modal = ({ show, hideConfirm, setStatusShow, setShow }) => {
           </button>
           <button
             className="border border-red-500 text-red-500 rounded-md px-12 py-3 hover:bg-red-500 hover:text-white font-bold text-2xl"
-            onClick={hideConfirm}
+            onMouseDown={() => setShow(false)}
           >
             <RxCross2 />
           </button>

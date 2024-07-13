@@ -3,6 +3,7 @@ import { MdCancel } from "react-icons/md";
 
 const CartCard = ({ cart, handleCartDelete }) => {
   const [numOfProd, setNumOfProd] = useState(1);
+  console.log(typeof cart.current_price[0].USD[0]);
   const handleIncrease = () => {
     setNumOfProd((prevNum) => Number(prevNum) + 1);
   };
@@ -17,7 +18,7 @@ const CartCard = ({ cart, handleCartDelete }) => {
         <div className="flex justify-start items-center gap-3 w-1/4">
           <div className="flex justify-center items-center p-2 bg-[#F9F9F9] w-20 h-20">
             <img
-              src={cart.imageSrc}
+              src={`https://api.timbu.cloud/images/${cart.photos[0].url}`}
               alt="https://via.placeholder.com/400"
               width={50}
             />
@@ -25,7 +26,7 @@ const CartCard = ({ cart, handleCartDelete }) => {
           <p className="text-lg font-normal">{cart.name}</p>
         </div>
         <span className="text-lg font-normal w-1/4 text-center">
-          ${cart.price}
+          $ {cart.current_price[0].USD[0]}
         </span>
         <div className="w-1/4 flex justify-center">
           <div className="border rounded flex w-fit">
@@ -48,7 +49,7 @@ const CartCard = ({ cart, handleCartDelete }) => {
         </div>
 
         <span className="text-lg font-semibold w-1/4 text-center">
-          ${numOfProd * cart.price}
+          $ {numOfProd * cart.current_price[0].USD[0]}
         </span>
 
         <MdCancel
@@ -70,7 +71,7 @@ const CartCard = ({ cart, handleCartDelete }) => {
         </span>
         <span className="flex gap-6 items-center">
           <p className="text-base">Pricing:</p>
-          <p className="text-[14px]">${cart.price}</p>
+          <p className="text-[14px]">${cart.current_price[0].USD[0]}</p>
         </span>
         <span className="flex gap-6 items-center">
           <p className="text-base">Quantity:</p>
@@ -94,7 +95,9 @@ const CartCard = ({ cart, handleCartDelete }) => {
         </span>
         <span className="flex gap-6 items-center">
           <p className="text-base">Subtotal:</p>
-          <p className="text-[14px]">${cart.price * cart.quantity}</p>
+          <p className="text-[14px]">
+            ${numOfProd * cart.current_price[0].USD[0]}
+          </p>
         </span>
         <MdCancel
           className="text-lg text-red-700 absolute top-2 right-2 cursor-pointer active:scale-95"

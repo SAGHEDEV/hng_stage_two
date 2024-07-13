@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const CoonfirmModal = ({ statusShow }) => {
   return (
     <div
-      className={`w-full lg:w-[100vh] h-[100%] fixed top-0 left-0 right-0 bottom-0 flex justify-center items-center ${
+      className={`w-full lg:w-[100vh] h-[100%] fixed top-0 left-0 right-0 bottom-0 flex justify-center items-center p-5 md:p-0 ${
         statusShow ? "block" : "hidden"
       }`}
     >

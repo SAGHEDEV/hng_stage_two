@@ -1,13 +1,10 @@
 import React, { useState } from "react";
 import { MdOutlineArrowDropUp, MdOutlineArrowDropDown } from "react-icons/md";
+import { handleCapitalize } from "../../../utilities/utils";
 
-const Filter = ({
-  filters,
-  filterState,
-  setFilterState,
-  setCurrentProduct,
-}) => {
+const Filter = ({ catData, setCategory, category, catLoad }) => {
   const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div className="flex justify-between items-center px-5 md:px-[120px] py-8 ">
       <div className="relative lg:hidden">
@@ -15,21 +12,26 @@ const Filter = ({
           className="w-40 py-3 border flex justify-between items-center px-3 rounded font-semibold lg:text-lg text-[#024E82]"
           onClick={() => setIsOpen(!isOpen)}
         >
-          {filterState}
+          {catLoad ? "Loading..." : ""}
+          {catData?.map((dat) => {
+            if (dat.id === category) {
+              return handleCapitalize(dat.name);
+            }
+          })}
           {!isOpen ? <MdOutlineArrowDropUp /> : <MdOutlineArrowDropDown />}
         </button>
         {isOpen ? (
           <div className="flex justify-center items-center flex-col bg-gray-100 mt-1 absolute gap-2 shadow-lg z-10">
-            {filters.map((filter) => (
+            {catData.map((cat) => (
               <span
+                key={cat.id}
                 className="w-44 h-10  flex justify-between items-center px-3 rounded hover:bg-gray-50 cursor-pointer"
                 onClick={() => {
-                  setFilterState(filter.value);
+                  setCategory(cat.id);
                   setIsOpen(false);
-                  setCurrentProduct(filter.target);
                 }}
               >
-                {filter.label}
+                {handleCapitalize(cat.name)}
               </span>
             ))}
           </div>
@@ -38,19 +40,19 @@ const Filter = ({
         )}
       </div>
       <div className="hidden  lg:flex justify-center items-center md:gap-12 lg:gap-[77px]">
-        {filters.map((filter) => (
+        {catLoad ? "Loading..." : ""}
+        {catData?.map((filter) => (
           <span
             className={`hover:text-[#024E82] cursor-pointer ${
-              filterState === filter.value
-                ? "text-[#024E82] text-[20px] font-[500]"
+              category === filter.id
+                ? "text-[18px] text-[#024E82] font-semibold"
                 : "text-[14px]"
             }`}
             onClick={() => {
-              setFilterState(filter.value);
-              setCurrentProduct(filter.target);
+              setCategory(filter.id);
             }}
           >
-            {filter.label}
+            {handleCapitalize(filter.name)}
           </span>
         ))}
       </div>

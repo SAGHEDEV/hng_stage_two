@@ -5,9 +5,12 @@ import CartHead from "./cartHead";
 import CartCheckout from "./cartCheckout";
 import { CartData } from "../../../utilities/products";
 import { total } from "../../../utilities/utils";
+import { useRecoilState, useRecoilValue } from "recoil";
+import { CartState } from "../../../utilities/management/state";
 
 const CartPage = () => {
-  const [carts, setCarts] = useState(CartData);
+  const [carts, setCarts] = useRecoilState(CartState);
+
   const handleCartDelete = (deleteId) => {
     const newCarts = carts.filter((cart) => cart.id !== deleteId);
     setCarts(newCarts);
@@ -24,8 +27,8 @@ const CartPage = () => {
           {carts.length ? (
             carts.map((cart) => (
               <CartCard
-                cart={cart}
-                key={cart.cart}
+                cart={cart.prod}
+                key={cart.prod.id}
                 handleCartDelete={handleCartDelete}
               />
             ))

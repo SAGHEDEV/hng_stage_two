@@ -3,8 +3,13 @@ import Card from "./card";
 import { Link } from "react-router-dom";
 import { CartData } from "../../../utilities/products";
 import { total } from "../../../utilities/utils";
+import { Form } from "antd";
+import { useRecoilValue } from "recoil";
+import { CartState } from "../../../utilities/management/state";
 
-const OrderSummary = ({ handleShowConfirm }) => {
+const OrderSummary = () => {
+  const cartState = useRecoilValue(CartState);
+  console.log(cartState);
   return (
     <div>
       <p className="font-medium text-[18px] lg:text-[24px] text-center mb-5">
@@ -12,8 +17,8 @@ const OrderSummary = ({ handleShowConfirm }) => {
       </p>
 
       <div className="my-12">
-        {CartData.map((cart) => (
-          <Card cart={cart} />
+        {cartState?.map((cart) => (
+          <Card cart={cart?.prod} />
         ))}
       </div>
 
@@ -40,7 +45,9 @@ const OrderSummary = ({ handleShowConfirm }) => {
           Payment Option
         </p>
         <div className="my-6 flex justify-start gap-3">
-          <input type="radio" name="payment-option" id="" />
+          <Form.Item name="payment_option">
+            <input type="radio" name="payment-option" id="" required />
+          </Form.Item>
           <p className="flex flex-col text-black">
             <span className="text-sm lg:text-[16px] pb-1">
               Cash on Delivery
@@ -58,7 +65,9 @@ const OrderSummary = ({ handleShowConfirm }) => {
           </p>
         </div>
         <div className="flex justify-start gap-4">
-          <input type="checkbox" name="agree" id="" />
+          <Form.Item name="agree">
+            <input type="checkbox" name="agree" id="" required />
+          </Form.Item>
           <p className="text-[12px] lg:text-[16px]">
             I agree to the{" "}
             <Link className="text-[#024E82]">Terms & conditions </Link>,
@@ -69,7 +78,6 @@ const OrderSummary = ({ handleShowConfirm }) => {
 
         <div className="flex justify-center items-center my-10">
           <button
-            onClick={handleShowConfirm}
             className="font-normal text-[16px]  h-[58px] px-5 text-white rounded-lg bg-[#024E82] ml-3 mt-5 self-center hover:opacity-90"
             type="submit"
           >
