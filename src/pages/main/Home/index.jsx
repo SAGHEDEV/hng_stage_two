@@ -14,7 +14,7 @@ const HomePage = () => {
   const [page, setPage] = useState(1);
   const [currentDet, setCurrentDet] = useState();
   const [category, setCategory] = useState("54a6e5de079543a8b40a2959fbb157c1");
-  const API = `https://timbu-get-all-products.reavdev.workers.dev/?organization_id=${ORG_ID}&category_id=${category}&reverse_sort=true&page=${page}&size=10&Appid=${API_ID}&Apikey=${API_KEY}`;
+  const API = `https://timbu-get-all-products.reavdev.workers.dev/?organization_id=${ORG_ID}&category_id=${category}&reverse_sort=true&page=${page}&size=15&Appid=${API_ID}&Apikey=${API_KEY}`;
   const API2 = `https://timbu-get-all-categories.reavdev.workers.dev/?organization_id=${ORG_ID}&reverse_sort=true&page=1&size=10&Appid=${API_ID}&Apikey=${API_KEY}`;
   const [currentProduct, setCurrentProduct] = useRecoilState(ProductState);
   const [carts, setCart] = useRecoilState(CartState);
@@ -89,7 +89,7 @@ const HomePage = () => {
         category={category}
       />
       <div className="px-5 md:px-[120px] py-8 grid grid-cols-2 lg:grid-cols-3 md:grid-cols-2 gap-5 lg:gap-10 blur-in2 relative">
-        {prodLoad ? (
+        {prodLoad || currentProduct?.length === 0 ? (
           <div className="absolute flex justify-center items-center w-full h-full p-16">
             <Spin size="large"></Spin>
           </div>

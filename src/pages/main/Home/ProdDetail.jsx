@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import { ImCancelCircle } from "react-icons/im";
 
 const ProdDetail = ({ currentDet, detShow, setDetShow, AddToCart, carts }) => {
+  const [imgIndex, setIndex] = useState(0);
   console.log(currentDet?.photos);
   return (
     <div
@@ -21,16 +22,21 @@ const ProdDetail = ({ currentDet, detShow, setDetShow, AddToCart, carts }) => {
         <div className="flex flex-col lg:flex-row justify-center lg:justify-around gap-6 lg:gap-12 items-center lg:items-start w-full">
           <div className="flex justify-start lg:w-2/6 gap-4 lg:block">
             <img
-              src={`https://api.timbu.cloud/images/${currentDet?.photos[0].url}`}
+              src={`https://api.timbu.cloud/images/${currentDet?.photos[imgIndex].url}`}
               alt={currentDet?.name}
               className="border-4 border-[#024E82]/50 rounded-lg shadow-md w-full max-w-[200px]"
             />
             <div className="flex flex-col lg:flex-row justify-center  lg:justify-start items-center gap-2x my-5">
-              {currentDet?.photos.map((photo) => (
-                <div className="border-4 border-gray-200/30 w-fit">
+              {currentDet?.photos.map((photo, index) => (
+                <div
+                  className={`border-4 border-gray-200/30 w-fit ${
+                    index === imgIndex ? "border-[#024E82]/50" : ""
+                  }`}
+                >
                   <img
                     src={`https://api.timbu.cloud/images/${photo?.url}`}
                     className="h-12 cursor-pointer active:scale-95"
+                    onClick={() => setIndex(index)}
                   />
                 </div>
               ))}

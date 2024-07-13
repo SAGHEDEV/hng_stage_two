@@ -20,7 +20,7 @@ const CartCard = ({ cart, handleCartDelete }) => {
             <img
               src={`https://api.timbu.cloud/images/${cart.photos[0].url}`}
               alt="https://via.placeholder.com/400"
-              width={50}
+              className="w-full"
             />
           </div>
           <p className="text-lg font-normal">{cart.name}</p>
@@ -64,7 +64,11 @@ const CartCard = ({ cart, handleCartDelete }) => {
           <p className="text-base">Product:</p>
           <span className="flex gap-4 items-center">
             <span className="bg-[#F9F9F9] w-[88px]  flex justify-center items-center">
-              <img src={cart.imageSrc} alt="" width={"52px"} />
+              <img
+                src={`https://api.timbu.cloud/images/${cart.photos[0].url}`}
+                alt=""
+                className="w-full"
+              />
             </span>
             <p className="text-romekan-text-300 text-[18px]">{cart.name}</p>
           </span>
