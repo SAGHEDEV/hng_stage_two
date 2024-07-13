@@ -15,7 +15,7 @@ const HomePage = () => {
   const [currentDet, setCurrentDet] = useState();
   const [category, setCategory] = useState("54a6e5de079543a8b40a2959fbb157c1");
   const API = `https://timbu-get-all-products.reavdev.workers.dev/?organization_id=${ORG_ID}&category_id=${category}&reverse_sort=true&page=${page}&size=10&Appid=${API_ID}&Apikey=${API_KEY}`;
-  const API2 = `https://api.timbu.cloud/categories?organization_id=${ORG_ID}&reverse_sort=true&page=1&size=10&Appid=${API_ID}&Apikey=${API_KEY}`;
+  const API2 = `https://timbu-get-all-categories.reavdev.workers.dev/?organization_id=${ORG_ID}&reverse_sort=true&page=1&size=10&Appid=${API_ID}&Apikey=${API_KEY}`;
   const [currentProduct, setCurrentProduct] = useRecoilState(ProductState);
   const [carts, setCart] = useRecoilState(CartState);
   const filters = [
