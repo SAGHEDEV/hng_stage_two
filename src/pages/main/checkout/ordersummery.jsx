@@ -1,14 +1,14 @@
 import React from "react";
 import Card from "./card";
 import { Link } from "react-router-dom";
-import { CartData } from "../../../utilities/products";
-import { total } from "../../../utilities/utils";
+// import { total } from "../../../utilities/utils";
 import { Form } from "antd";
 import { useRecoilValue } from "recoil";
 import { CartState } from "../../../utilities/management/state";
 
 const OrderSummary = () => {
   const cartState = useRecoilValue(CartState);
+  const total = useRecoilValue(totalPrice);
   console.log(cartState);
   return (
     <div>
@@ -36,7 +36,7 @@ const OrderSummary = () => {
         <div className="w-full p-[1px] bg-gray-200 my-5"></div>
         <p className="flex justify-between items-center w-full text-[16px]">
           <span>Total</span>
-          <span>${total}</span>
+          <span>${total || 0}</span>
         </p>
       </div>
 

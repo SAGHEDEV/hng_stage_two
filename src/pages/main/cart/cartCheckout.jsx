@@ -1,7 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useRecoilValue } from "recoil";
+import { totalPrice } from "../../../utilities/management/setter";
 
-const CartCheckout = ({ total }) => {
+const CartCheckout = () => {
+  const total = useRecoilValue(totalPrice);
+  console.log(total);
   return (
     <div className="mt-16 flex flex-col justify-between items-center lg:items-start lg:flex-row gap-16">
       <div className="w-full lg:w-1/2  lg:sticky top-24">
@@ -36,7 +40,7 @@ const CartCheckout = ({ total }) => {
           <div className="w-full p-[1px] bg-gray-200 my-5"></div>
           <p className="flex justify-between items-center w-full text-[16px]">
             <span>Total</span>
-            <span>${total}</span>
+            <span>${total || 0}</span>
           </p>
           <Link to="/cart/checkout">
             <button

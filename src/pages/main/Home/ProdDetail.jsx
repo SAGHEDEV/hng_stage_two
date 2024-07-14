@@ -4,7 +4,7 @@ import { ImCancelCircle } from "react-icons/im";
 
 const ProdDetail = ({ currentDet, detShow, setDetShow, AddToCart, carts }) => {
   const [imgIndex, setIndex] = useState(0);
-  console.log(currentDet?.photos);
+
   return (
     <div
       className={`w-full lg:w-[100vh] h-[100%] fixed top-0 left-0 right-0 bottom-0 flex justify-center items-center p-4 ${

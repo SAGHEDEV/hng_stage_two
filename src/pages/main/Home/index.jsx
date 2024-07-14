@@ -16,7 +16,9 @@ const HomePage = () => {
   const [category, setCategory] = useState("54a6e5de079543a8b40a2959fbb157c1");
   const API = `https://timbu-get-all-products.reavdev.workers.dev/?organization_id=${ORG_ID}&category_id=${category}&reverse_sort=true&page=${page}&size=6&Appid=${API_ID}&Apikey=${API_KEY}`;
   const API2 = `https://timbu-get-all-categories.reavdev.workers.dev/?organization_id=${ORG_ID}&reverse_sort=true&page=1&size=10&Appid=${API_ID}&Apikey=${API_KEY}`;
-  const [currentProduct, setCurrentProduct] = useRecoilState(ProductState);
+  const [currentProduct, setCurrentProduct] = useRecoilState(
+    ProductState || []
+  );
   const [carts, setCart] = useRecoilState(CartState);
   const filters = [
     {
@@ -37,16 +39,27 @@ const HomePage = () => {
     },
   ];
   const [detShow, setDetShow] = useState(false);
+  const additional_info = {
+    quantity: 1,
+    subtotal: 0,
+  };
 
   const AddToCart = (prod) => {
-    if (carts?.some((e) => e?.prod.name === prod.name)) {
+    if (carts?.some((e) => e?.name === prod.name)) {
       notification.info({
         message: "",
         description: "Product Already in Cart",
       });
     } else {
+      console.log();
       setCart((prevState) => {
-        const newCart = [...prevState, { prod }];
+        const newCart = [
+          ...prevState,
+          {
+            ...prod,
+            ...{ quantity: 1, subtotal: prod?.current_price[0].USD[0] },
+          },
+        ];
         return newCart;
       });
       notification.success({
