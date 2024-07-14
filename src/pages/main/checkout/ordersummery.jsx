@@ -19,7 +19,7 @@ const OrderSummary = () => {
 
       <div className="my-12">
         {cartState?.map((cart) => (
-          <Card cart={cart?.prod} />
+          <Card cart={cart} />
         ))}
       </div>
 
