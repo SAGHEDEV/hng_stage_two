@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { Form } from "antd";
 import { useRecoilValue } from "recoil";
 import { CartState } from "../../../utilities/management/state";
+import { totalPrice } from "../../../utilities/management/setter";
 
 const OrderSummary = () => {
   const cartState = useRecoilValue(CartState);
