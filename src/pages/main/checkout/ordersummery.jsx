@@ -10,7 +10,7 @@ import { totalPrice } from "../../../utilities/management/setter";
 const OrderSummary = () => {
   const cartState = useRecoilValue(CartState);
   const total = useRecoilValue(totalPrice);
-  console.log(cartState);
+
   return (
     <div>
       <p className="font-medium text-[18px] lg:text-[24px] text-center mb-5">

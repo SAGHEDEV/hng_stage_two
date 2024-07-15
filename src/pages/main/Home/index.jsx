@@ -51,7 +51,6 @@ const HomePage = () => {
         description: "Product Already in Cart",
       });
     } else {
-      console.log();
       setCart((prevState) => {
         const newCart = [
           ...prevState,
@@ -66,6 +65,7 @@ const HomePage = () => {
         message: "Success!",
         description: "Product Added to cart successfully",
       });
+      localStorage.setItem("Cart", JSON.stringify(carts));
     }
   };
   const {

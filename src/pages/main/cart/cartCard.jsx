@@ -7,8 +7,6 @@ const CartCard = ({
   handleIncrease,
   handleDecrease,
 }) => {
-  console.log(cart);
-
   return (
     <>
       <div className="hidden my-4  lg:flex justify-between items-center px-5 py-5 rounded-xl shadow-md relative">

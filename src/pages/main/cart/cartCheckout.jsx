@@ -5,7 +5,7 @@ import { totalPrice } from "../../../utilities/management/setter";
 
 const CartCheckout = () => {
   const total = useRecoilValue(totalPrice);
-  console.log(total);
+
   return (
     <div className="mt-16 flex flex-col justify-between items-center lg:items-start lg:flex-row gap-16">
       <div className="w-full lg:w-1/2  lg:sticky top-24">

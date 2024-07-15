@@ -7,7 +7,7 @@ export const API =
 
 export const CartState = atom({
   key: "CartState",
-  default: [],
+  default: JSON.parse(localStorage.getItem("Cart")) || [],
 });
 export const ProductState = atom({
   key: "Products",

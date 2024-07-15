@@ -20,7 +20,7 @@ const CartPage = () => {
       const foundItemIndex = prevCartItems.findIndex(
         (item) => item.id === cartId.id
       );
-      console.log(foundItemIndex);
+
       if (foundItemIndex !== -1) {
         // Item found, update its quantity
 
@@ -29,7 +29,7 @@ const CartPage = () => {
           quantity: cartId.quantity + 1,
           subtotal: cartId.current_price[0].USD[0] * (cartId.quantity + 1),
         };
-        console.log(updatedItem);
+
         return [
           ...prevCartItems.slice(0, foundItemIndex),
           updatedItem,
@@ -46,7 +46,7 @@ const CartPage = () => {
       const foundItemIndex = prevCartItems.findIndex(
         (item) => item.id === cartId.id
       );
-      console.log(foundItemIndex);
+
       if (foundItemIndex !== -1 && cartId.quantity > 1) {
         // Item found, update its quantity
 
@@ -55,7 +55,7 @@ const CartPage = () => {
           quantity: cartId.quantity - 1,
           subtotal: cartId.current_price[0].USD[0] * (cartId.quantity - 1),
         };
-        console.log(updatedItem);
+
         return [
           ...prevCartItems.slice(0, foundItemIndex),
           updatedItem,
