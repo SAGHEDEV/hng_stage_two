@@ -14,7 +14,9 @@ const Card = ({ cart }) => {
           </span>
           <span className="flex justify-between items-start flex-col gap-3">
             <p className="text-romekan-text-300 text-[16px]">{cart.name}</p>
-            <p className="text-romekan-text-300 text-[16px]">{cart.quantity}</p>
+            <p className="text-romekan-text-300 text-[16px]">
+              Qty: {cart.quantity}
+            </p>
           </span>
         </div>
 
