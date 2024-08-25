@@ -1,10 +1,9 @@
-import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import CartCard from "./cartCard";
 import CartHead from "./cartHead";
 import CartCheckout from "./cartCheckout";
 import { total } from "../../../utilities/utils";
-import { useRecoilState, useRecoilValue } from "recoil";
+import { useRecoilState } from "recoil";
 import { CartState } from "../../../utilities/management/state";
 
 const CartPage = () => {
@@ -80,7 +79,7 @@ const CartPage = () => {
             carts.map((cart) => (
               <CartCard
                 cart={cart}
-                // key={cart.id}
+                key={cart.id}
                 handleCartDelete={handleCartDelete}
                 handleIncrease={handleIncrease}
                 handleDecrease={handleDecrease}
@@ -101,7 +100,6 @@ const CartPage = () => {
           </Link>
         </div>
       </div>
-      <button onClick={() => handleIncrease(carts[0])}>button</button>
       <CartCheckout total={total} />
     </div>
   );

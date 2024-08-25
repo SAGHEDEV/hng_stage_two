@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Header from "../components/header";
 import Footer from "../components/footer";
@@ -12,6 +12,9 @@ const Main = () => {
   useEffect(() => {
     window.scroll(0, 0);
   }, [pathname]);
+  const params = new URLSearchParams(window.location.search);
+  const foo = params.get("foo");
+  console.log(foo);
   return (
     <div>
       <Header />

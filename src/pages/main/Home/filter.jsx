@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { MdOutlineArrowDropUp, MdOutlineArrowDropDown } from "react-icons/md";
 import { handleCapitalize } from "../../../utilities/utils";
 
@@ -43,6 +43,7 @@ const Filter = ({ catData, setCategory, category, catLoad }) => {
         {catLoad ? "Loading..." : ""}
         {catData?.map((filter) => (
           <span
+            key={filter.id}
             className={`hover:text-[#024E82] cursor-pointer ${
               category === filter.id
                 ? "text-[18px] text-[#024E82] font-semibold"

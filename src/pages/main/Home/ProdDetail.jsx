@@ -32,6 +32,7 @@ const ProdDetail = ({ currentDet, detShow, setDetShow, AddToCart, carts }) => {
                   className={`border-4 border-gray-200/30 w-fit ${
                     index === imgIndex ? "border-[#024E82]/50" : ""
                   }`}
+                  key={index}
                 >
                   <img
                     src={`https://api.timbu.cloud/images/${photo?.url}`}

@@ -1,4 +1,3 @@
-import React from "react";
 import Instagram from "../assets/images/instagram.jpeg";
 import Tiktok from "../assets/images/tiktok3.png";
 import Twitter from "../assets/images/twitter.jpeg";

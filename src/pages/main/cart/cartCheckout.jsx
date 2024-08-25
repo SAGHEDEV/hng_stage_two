@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { useRecoilValue } from "recoil";
 import { totalPrice } from "../../../utilities/management/setter";
@@ -42,10 +41,11 @@ const CartCheckout = () => {
             <span>Total</span>
             <span>${total || 0}</span>
           </p>
-          <Link to="/cart/checkout">
+          <Link to={total ? "/cart/checkout" : "/cart"}>
             <button
               className="font-normal text-[16px]  h-[58px] px-5 text-white rounded-lg bg-[#024E82] ml-3 mt-5 self-center hover:opacity-90"
               type="submit"
+              disabled={!total}
             >
               Proceed to Checkout
             </button>
